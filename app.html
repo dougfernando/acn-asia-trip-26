@@ -17,7 +17,474 @@
       // ============================================================================
       // CONTENT CONFIGURATION - Edit all content here without changing code
       // ============================================================================
-      const CONFIG = {
+      
+const CONFIG = {
+  app: {
+    title: "Asia Reinvention Exchange 2026",
+    subtitle: "China & Singapore · March 8–17, 2026",
+    themeButtonText: "Theme",
+  },
+  tabs: {
+    itinerary: "Itinerary",
+    companies: "Companies",
+    cities: "Cities",
+    logistics: "Logistics",
+  },
+  panels: {
+    itinerary: {
+      title: "Agenda & Events",
+      searchPlaceholder: "Search (city, company, flight…)",
+    },
+    companies: {
+      title: "Company Insights",
+      searchPlaceholder: "Search",
+    },
+    cities: {
+      title: "City Guides",
+      searchPlaceholder: "Search cities",
+    },
+    logistics: {
+      title: "Flights, Rail & Hotels",
+      sections: {
+        flights: "Flights",
+        rail: "Rail",
+        hotels: "Hotels",
+      },
+    },
+  },
+  data: {
+    itinerary: [
+      {
+        date: "2026-03-08",
+        city: "Beijing",
+        title: "Arrival in Beijing",
+        logistics: "Flight arrival; Check-in meeting at 18:00 @ hotel.",
+        tags: ["Arrival", "Check-in"],
+        morning_summary: ["Transit/Flight QR892"],
+        afternoon_summary: [
+          "14:45 Arrival and customs clearance",
+          "16:00 Hotel check-in"
+        ],
+        evening_summary: [
+          "18:00 Check-in dinner @ hotel",
+          "19:00 Optional meal on Ghost Street (Hutong) with Accenture team",
+        ],
+      },
+      {
+        date: "2026-03-09",
+        city: "Beijing",
+        title: "Meetings: Meituan, JD.com, Baidu, PIPO, and ICBC",
+        logistics: "Excursion at 08:00; Transit to meetings from lobby at 09:00; Van departing at 09:45.",
+        tags: ["Marketplace", "Digital Commerce", "Logistics", "AI", "Fintech"],
+        morning_summary: [
+          "08:00 Temple of Heaven & Lama Temple visit",
+          "10:00 Meituan HQ executive meeting",
+          "12:00 Lunch",
+        ],
+        afternoon_summary: [
+          "14:00 JD.com executive meeting in Yizhuang"
+        ],
+        evening_summary: [
+          "18:00 Return to Hotel",
+          "19:00 Dinner - Open (Optional meal near hotel)",
+        ],
+      },
+      {
+        date: "2026-03-10",
+        city: "Hangzhou",
+        title: "Unitree Robotics and Executive Dinner",
+        logistics: "Meet at 06:30 for Train to Hangzhou (07:56 departure).",
+        tags: ["Rail", "Robotics", "Exec Dinner"],
+        morning_summary: [
+          "07:56 Train G39 departure from Beijing South",
+          "12:30 Arrival and station-side lunch",
+        ],
+        afternoon_summary: [
+          "14:00 Unitree Robotics meeting (Fengda Creative Park) and robotics demo",
+          "17:00 Check-in Four Seasons Hangzhou Centre",
+        ],
+        evening_summary: [
+          "18:30 Executive dinner @ Ru Yuan (Hangzhou Botanical Gardens)",
+        ],
+      },
+      {
+        date: "2026-03-11",
+        city: "Hangzhou",
+        title: "Ecosystem Deep Dive: Alibaba and Ant Group",
+        logistics: "Lobby departure at 08:30 for Xixi Campus.",
+        tags: ["Marketplace", "Payments", "Fintech"],
+        morning_summary: [
+          "09:00 Alibaba HQ (Xixi Campus) session",
+          "12:00 Lunch with Alibaba/Ant teams",
+        ],
+        afternoon_summary: [
+          "14:00 Ant Group (Ant A Space) executive meeting",
+          "17:00 Transit to West Lake (tour optional)",
+        ],
+        evening_summary: [
+          "17:30 West Lake sunset boat trip and dinner",
+          "Dinner - Open",
+        ],
+      },
+      {
+        date: "2026-03-12",
+        city: "Shenzhen",
+        title: "Flight to Shenzhen and Huawei Campus",
+        logistics: "Meet at 05:00; Flight CA1727/CA1737 departs HGH at 07:30.",
+        tags: ["Flight", "Huawei day", "Infrastructure"],
+        morning_summary: [
+          "07:30 Flight to Shenzhen (Arrival 09:40)",
+          "Transit to Huawei Ox Horn Campus (Dongguan)",
+        ],
+        afternoon_summary: [
+          "12:00 Lunch with Huawei Digital Finance CEO",
+          "13:30 Campus tour and 14:00 Executive meeting",
+          "16:00 Specialized workshops (AI, Security, SME)",
+        ],
+        evening_summary: [
+          "18:00 Dinner with Huawei",
+          "20:00 Check-in at JW Marriott Shenzhen",
+        ],
+      },
+      {
+        date: "2026-03-13",
+        city: "Shenzhen",
+        title: "Digital Banking & Innovation: WeBank, Ping An, Accenture",
+        logistics: "Lobby departure at 08:30.",
+        tags: ["Digital Banking", "Innovation", "Cloud", "China wrap-up"],
+        morning_summary: [
+          "09:00 WeBank meeting",
+          "12:30 PingAn Technology Centre tour and PingAn Bank executive meeting",
+        ],
+        afternoon_summary: [
+          "14:00 PingAn Bank executive meeting continuation",
+          "15:30 Accenture Innovation Centre session and China wrap-up",
+        ],
+        evening_summary: [
+          "19:00 Group meal in Futian",
+          "Futian City Light Show experience",
+          "Breakout #2: Next-Gen Banking session",
+        ],
+      },
+      {
+        date: "2026-03-14",
+        city: "Shenzhen",
+        title: "Hong Kong Regional Tour / Free Day",
+        logistics: "Meet at 08:30 for bus transfer to Hong Kong; Optional day trip from Shenzhen.",
+        tags: ["HKG Tour", "Networking", "Free Time"],
+        morning_summary: [
+          "Victoria Peak city views",
+          "Star Avenue and Palace Museum",
+          "Optional: Free time in Shenzhen or trip to HKG",
+        ],
+        afternoon_summary: [
+          "12:30 Semi-buffet lunch @ Rosedale Hotel",
+          "13:30 Star Ferry trip on Victoria Harbour",
+          "15:00 Free time in HKG",
+        ],
+        evening_summary: [
+          "17:00 Departure for Shenzhen",
+          "18:00 Return to JW Marriott",
+        ],
+      },
+      {
+        date: "2026-03-15",
+        city: "Singapore",
+        title: "Flight and Free Time in Singapore",
+        logistics: "Meet at 05:30; Flight CZ5037/CA7995 departs SZX at 08:05/08:15.",
+        tags: ["Flight", "Free Time"],
+        morning_summary: [
+          "08:15 Flight CZ5037/CA7995 to Singapore (Arrival 12:10)",
+        ],
+        afternoon_summary: [
+          "14:00 Check-in Swissotel The Stamford and Free Time",
+        ],
+        evening_summary: [
+          "19:30 Executive dinner at Marina Bay Sands",
+        ],
+      },
+      {
+        date: "2026-03-16",
+        city: "Singapore",
+        title: "Singapore Financial Hub: DBS, UOB, ByteDance, NETS, GFTN",
+        logistics: "Lobby departure at 08:30 for MBFC.",
+        tags: ["Banking", "Fintech", "Infrastructure", "Business", "Breakout"],
+        morning_summary: [
+          "09:00 DBS (MBFC Tower 3) meeting",
+          "10:45 UOB (80 Raffles Place) meeting",
+        ],
+        afternoon_summary: [
+          "13:30 ByteDance (One Raffles Quay) / TikTok meeting",
+          "16:00 NETS and 17:00 GFTN/Regulatory agenda sessions",
+        ],
+        evening_summary: [
+          "Dinner - Open",
+        ],
+      },
+      {
+        date: "2026-03-17",
+        city: "Singapore",
+        title: "E-Commerce & Ecosystem: Shopee, Grab, Accenture",
+        logistics: "Checkout at 08:30; Afternoon transit to Changi Airport for flight back to Brazil.",
+        tags: ["SuperApp", "Embedded Finance", "Business"],
+        morning_summary: [
+          "09:00 Shopee (MBFC) executive session and embedded credit session",
+          "11:00 Grab (UOB Plaza) super-app overview",
+        ],
+        afternoon_summary: [
+          "13:30 Lunch and Accenture Connected Innovation Centre wrap-up",
+          "14:30 Closing session and wrap-up",
+        ],
+        evening_summary: [
+          "17:00 Tour end; individual airport departures for flight back to Brazil",
+        ],
+      },
+    ],
+    flights: [
+      {
+        date: "2026-03-12",
+        from: "HGH",
+        to: "SZX",
+        carrier: "Air China",
+        flight: "CA1727 / CA1737",
+        time: "07:30",
+      },
+      {
+        date: "2026-03-15",
+        from: "SZX",
+        to: "SIN",
+        carrier: "China Southern / Air China",
+        flight: "CZ5037 / CA7995",
+        time: "08:15 / 08:05",
+      },
+    ],
+    rail: [
+      {
+        date: "2026-03-10",
+        from: "Beijing South",
+        to: "Hangzhou",
+        service: "High-speed rail #G39",
+        time: "07:56",
+        ref: "G39",
+      },
+    ],
+    hotels: [
+      { city: "Beijing", hotel: "Hilton Beijing Wangfujing", address: "#8 Wangfujing East Street, Dongcheng" },
+      { city: "Hangzhou", hotel: "Four Seasons Hangzhou Centre", address: "493 Zhongshan North Road, Gongshu" },
+      { city: "Shenzhen", hotel: "JW Marriott Shenzhen", address: "6005 Shennan Blvd, Futian District" },
+      { city: "Singapore", hotel: "Swissotel The Stamford", address: "2 Stamford Road, Singapore" },
+    ],
+    companies: [
+      {
+        name: "Meituan",
+        intro: "Founded in 2010, Meituan is China's dominant local services Super App, integrating food delivery, mobility, in-store services, travel booking, and embedded financial products.",
+        why: "Meituan is a benchmark in Super App orchestration and embedded payments at scale. It shows how to integrate credit, loyalty, and offers into daily consumption journeys.",
+        meeting: "March 9, 2026, 10:00",
+        address: "Wangjing International R&D Park, No.6 Wangjing East Road, Chaoyang",
+        link: "https://about.meituan.com/",
+      },
+      {
+        name: "PIPO (ByteDance Payments)",
+        intro: "PIPO represents ByteDance's fintech and payments capability, enabling in-app payments and merchant services within TikTok/Douyin ecosystems.",
+        why: "PIPO demonstrates how a content-driven ecosystem evolves into a payments and fintech infrastructure layer with seamless checkout experiences.",
+        meeting: "March 9, 2026",
+        link: "https://www.bytedance.com/",
+      },
+      {
+        name: "JD.com",
+        intro: "Founded in 1998, JD.com is one of China's largest e-commerce players with its own logistics infrastructure and robotics-driven fulfillment network.",
+        why: "JD is critical because it combines operational intelligence with financial decisioning through merchant credit and working capital powered by real-time data.",
+        meeting: "March 9, 2026, 14:00",
+        address: "JD Building, No. 18 Kechuang 11 Street, Yizhuang Economic Zone",
+        link: "https://corporate.jd.com/",
+      },
+      {
+        name: "ICBC",
+        intro: "Established in 1984, ICBC is one of the largest banks in the world by assets and transaction volume.",
+        why: "ICBC provides a case study in industrial-scale banking AI, covering risk management, liquidity monitoring, and fraud detection.",
+        meeting: "March 9, 2026",
+        link: "http://www.icbc.com.cn/",
+      },
+      {
+        name: "Baidu",
+        intro: "Founded in 2000, Baidu evolved from search into a diversified AI platform company including LLMs, cloud services, and autonomous systems.",
+        why: "Baidu is relevant in understanding enterprise AI platforms and model orchestration at scale with foundational models and domain-specific layers.",
+        meeting: "March 9, 2026",
+        link: "https://ir.baidu.com/",
+      },
+      {
+        name: "Unitree Robotics",
+        intro: "Unitree is a robotics company specializing in quadruped and humanoid robots with advanced mobility and AI perception systems.",
+        why: "Unitree connects to physical security and operational automation in branches, logistics hubs, and cash-handling environments. Relevant for physical security in financial environments.",
+        meeting: "March 10, 2026, 14:00",
+        address: "Building 1, Fengda Creative Park, No. 88 Dongliu Road, Binjiang",
+        link: "https://www.unitree.com/",
+      },
+      {
+        name: "Alibaba",
+        intro: "Founded in 1999, Alibaba built one of the most integrated digital commerce ecosystems combining marketplaces, cloud, logistics, and data infrastructure.",
+        why: "Alibaba is a reference for ecosystem-scale orchestration of commerce, identity, and finance with real-time personalization.",
+        meeting: "March 11, 2026, 09:00",
+        address: "969 Wenyi West Road, Alibaba Xixi Campus, Area A, Hangzhou",
+        link: "https://www.alibabagroup.com/",
+      },
+      {
+        name: "Ant Group",
+        intro: "Ant Group operates Alipay, one of the world's most advanced fintech ecosystems integrating payments, credit, wealth management, and insurance.",
+        why: "Ant is central to AI-driven fraud prevention, multidimensional identity, and frictionless authentication with behavioral biometrics.",
+        meeting: "March 11, 2026, 14:00",
+        address: "Ant A Space, No. 569 Xixi Road, Xihu District, Hangzhou",
+        link: "https://www.antgroup.com/",
+      },
+      {
+        name: "Huawei",
+        intro: "Founded in 1987, Huawei is a global telecom and technology infrastructure leader with strong R&D intensity and focus on digital finance and cloud strategy.",
+        why: "Huawei is strategically critical for our data foundation, cloud strategy, and cybersecurity architecture.",
+        meeting: "March 12, 2026, 12:00",
+        address: "Xiliubeipo Village, Songshan Lake, Dongguan",
+        link: "https://www.huawei.com/",
+      },
+      {
+        name: "WeBank",
+        intro: "Founded in 2014 as a fully digital bank backed by Tencent, WeBank operates without branches and is heavily AI-native.",
+        why: "WeBank is a benchmark for extreme automation and sub-second credit decisioning with real-time data layers.",
+        meeting: "March 13, 2026, 09:00",
+        address: "No. 88, Jingang Street, Guiwan Community, Nanshan, Shenzhen",
+        link: "https://www.webank.com/",
+      },
+      {
+        name: "Ping An Bank",
+        intro: "Ping An Bank integrates banking into a multi-industry ecosystem including insurance and healthcare.",
+        why: "Ping An demonstrates how AI becomes the structural backbone of cross-selling and lifecycle management with dynamic credit scoring.",
+        meeting: "March 13, 2026, 14:00",
+        address: "5047 Shennan East Road, Luohu District, Shenzhen",
+        link: "https://bank.pingan.com/",
+      },
+      {
+        name: "China Merchants Bank (CMB)",
+        intro: "China Merchants Bank is one of China's most digitally advanced retail banks known for strong mobile banking capabilities.",
+        why: "CMB is relevant as a benchmark for mobile-first retail banking modernization balancing experimentation with risk governance.",
+        meeting: "March 13, 2026",
+        link: "http://english.cmbchina.com/",
+      },
+      {
+        name: "DBS",
+        intro: "Founded in 1968, DBS is Singapore's flagship digital banking transformation case study.",
+        why: "DBS provides validation of engineering-driven banking transformation with DevOps maturity and cloud optimization.",
+        meeting: "March 16, 2026, 09:00",
+        address: "MBFC Tower 3, 12 Marina Boulevard, Singapore",
+        link: "https://www.dbs.com/",
+      },
+      {
+        name: "UOB",
+        intro: "UOB is a major Southeast Asian bank with a strong regional footprint and SME focus.",
+        why: "UOB offers perspective on cross-border connectivity and regulatory harmonization relevant for LatAm strategy.",
+        meeting: "March 16, 2026, 10:45",
+        address: "80 Raffles Place, Singapore",
+        link: "https://www.uobgroup.com/",
+      },
+      {
+        name: "ByteDance / TikTok",
+        intro: "Owner of TikTok/Douyin, evolving content ecosystems into payment layers through content-driven fintech infrastructure.",
+        why: "Demonstrates seamless checkout and fintech infrastructure evolution from a content-driven ecosystem.",
+        meeting: "March 16, 2026, 13:30",
+        address: "Level 26, South Tower, One Raffles Quay, Singapore",
+        link: "https://www.bytedance.com/",
+      },
+      {
+        name: "NETS",
+        intro: "NETS is Singapore's national payments infrastructure provider operating debit networks and QR systems.",
+        why: "NETS provides insight into domestic payment scheme modernization and national interoperability frameworks.",
+        meeting: "March 16, 2026, 16:00",
+        link: "https://www.nets.com.sg/",
+      },
+      {
+        name: "GFTN / GIC",
+        intro: "GFTN focuses on regulatory sessions; GIC is Singapore's sovereign wealth fund managing long-term global investments.",
+        why: "Offers perspective on long-horizon capital allocation and technology investment theses relevant to sovereign investors.",
+        meeting: "March 16, 2026, 17:00",
+        link: "https://www.gic.com.sg/",
+      },
+      {
+        name: "Shopee",
+        intro: "Shopee is Southeast Asia's leading marketplace platform integrating commerce, payments, and financial services.",
+        why: "Shopee is relevant for our ambitions around embedded credit, gamified loyalty, and high-conversion checkout journeys.",
+        meeting: "March 17, 2026, 09:00",
+        address: "MBFC Tower 3, 12 Marina Boulevard, Singapore",
+        link: "https://shopee.sg/",
+      },
+      {
+        name: "Grab",
+        intro: "Grab evolved into a Southeast Asian Super App combining mobility, delivery, and financial services.",
+        why: "Grab demonstrates how to structure ecosystem-based embedded finance with merchant underwriting frameworks.",
+        meeting: "March 17, 2026, 11:00",
+        address: "80 Raffles Place, UOB Plaza, Singapore",
+        link: "https://www.grab.com/",
+      },
+      {
+        name: "Accenture",
+        intro: "Accenture operates as the integrator translating ecosystem insights into executable transformation strategies.",
+        why: "Accenture sessions synthesize learnings into a cohesive digital transformation roadmap aligned with strategic priorities.",
+        meeting: "March 13 & 17, 2026",
+        link: "https://www.accenture.com/",
+      },
+    ],
+    cities: [
+      {
+        name: "Beijing",
+        description: "The capital of China, known for its deep history, opulent palaces, and modern high-tech growth.",
+        history: "Political center for 800+ years, Beijing is renowned for its temples and huge stone walls. It seamlessly integrates its imperial past with its status as a modern political and technological epicenter, home to giants like Meituan and JD.",
+        companies: ["Meituan", "PIPO (TikTok)", "JD.com", "ICBC", "Baidu"],
+        attractions: ["Forbidden City", "Great Wall of China (Mutianyu)", "Temple of Heaven", "Lama Temple", "Summer Palace", "Tiananmen Square", "Ghost Street"],
+        tips: ["Visit the Hutongs for traditional dining", "Check air quality apps daily", "Book attraction tickets well in advance"],
+      },
+      {
+        name: "Hangzhou",
+        description: "A major tech hub and e-commerce capital of China famously centered around the beautiful West Lake.",
+        history: "One of the Seven Ancient Capitals of China, historically described by Marco Polo as the 'finest and most splendid city in the world'. It is now heavily influenced by Alibaba and Ant Group.",
+        companies: ["Alibaba", "Ant Group", "Unitree Robotics"],
+        attractions: ["West Lake", "Ru Yuan", "Botanical Gardens", "Lingyin Temple", "Xixi National Wetland Park", "Hefang Street", "Leifeng Pagoda"],
+        tips: ["Try Longjing (Dragon Well) tea", "Sunset boat trips are a highlight", "Rent a bike to explore the West Lake", "Expect heavy crowds during weekends"],
+      },
+      {
+        name: "Shenzhen",
+        description: "Global center for hardware innovation, digital banking, and China's Silicon Valley.",
+        history: "Transformed from a market town of 30,000 in 1979 to a 17M+ megacity. As China's first Special Economic Zone, it is now a global center for manufacturing and tech innovation.",
+        companies: ["Huawei", "WeBank", "Ping An Bank", "China Merchants Bank", "Kingdee", "Accenture"],
+        attractions: ["Futian Light Show", "Ping An Finance Centre", "OCT Harbour", "Window of the World", "Huaqiangbei Electronics Market", "Splendid China Folk Village"],
+        tips: ["Very pedestrian-friendly Futian district", "Close to Hong Kong border", "Great for electronics shopping at Huaqiangbei"],
+      },
+      {
+        name: "Hong Kong",
+        description: "Global financial bridge between China and the world; a strategic trading port with unique cultural heritage.",
+        history: "Strategic trading port and autonomous territory with unique cultural heritage, serving as a vital link for international finance.",
+        companies: ["Regional Banking Hubs"],
+        attractions: ["Victoria Peak", "Victoria Harbour", "Palace Museum", "Star Avenue"],
+        tips: ["Use the Star Ferry for harbor views", "Walking shoes for Peak trails"],
+      },
+      {
+        name: "Singapore",
+        description: "Global financial center and sovereign city-state known for highly efficient digital infrastructure.",
+        history: "Founded as a British colony in 1819 and independent since 1965, it rapidly developed into a top-tier global economy with world-class infrastructure.",
+        companies: ["DBS", "UOB", "ByteDance", "Shopee", "Grab", "NETS", "GIC", "Accenture"],
+        attractions: ["Marina Bay Sands", "Gardens by the Bay", "Changi Jewel", "Singapore Botanic Gardens", "Sentosa Island"],
+        tips: ["English is primary language", "Strict cleanliness laws (no littering or gum)", "Enjoy diverse food at local Hawker Centres"],
+      },
+      {
+        name: "Shanghai",
+        description: "China's biggest city and a global financial hub symbolising economic resurgence.",
+        history: "A major 19th-century trading port that now blends historic architecture with a futuristic skyline.",
+        companies: ["No official meetings scheduled; free time exploration"],
+        attractions: ["The Bund", "Yu Garden", "Shanghai Tower", "Nanjing Road", "Oriental Pearl TV Tower"],
+        tips: ["Use the Metro to avoid traffic", "Download Alipay/WeChat Pay in advance", "Try Xiao Long Bao (soup dumplings)"],
+      },
+    ],
+  },
+};
+
+
+
+	const CONFIG_OLD = {
         app: {
           title: "Asia Trip 2026",
           subtitle: "China & Singapore · March 8–17, 2026",
