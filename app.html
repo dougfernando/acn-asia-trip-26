@@ -1476,8 +1476,8 @@
 
       // Theme
       const root = document.documentElement;
-      const savedTheme = localStorage.getItem("app_theme");
-      if (savedTheme) root.setAttribute("data-theme", savedTheme);
+      const savedTheme = localStorage.getItem("app_theme") || "light";
+      root.setAttribute("data-theme", savedTheme);
       document.getElementById("themeBtn").addEventListener("click", () => {
         const now =
           root.getAttribute("data-theme") === "light" ? "dark" : "light";
